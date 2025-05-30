@@ -1,7 +1,7 @@
 
 window.addEventListener("load", () => { main(); });
 
-//https://raw.githack.com/Ailten/PokeVtuberRandomiser/main/index.html
+//for run from github : https://raw.githack.com/Ailten/PokeVtuberRandomiser/main/index.html
 
 async function main(){
 
