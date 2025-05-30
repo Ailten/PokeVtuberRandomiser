@@ -1,4 +1,6 @@
 
+console.log("vtuber.js is load");
+
 const urlJson = "https://raw.githubusercontent.com/Ailten/PokeVtuberRandomiser/refs/heads/main/JSON/vtuber.txt";
 
 // ask a random vtuber.
