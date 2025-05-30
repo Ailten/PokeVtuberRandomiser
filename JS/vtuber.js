@@ -13,11 +13,13 @@ async function getRandomVtuber(){
 
             if(!response.ok)
                 throw new Error(`fetch error ${response.status}`);
-            
+
             let value = undefined;
             await response.text().then(result => {
                 value = result;
             })
+
+            value = value.replace("[ \n]", "");
 
             return JSON.parse(value);
         }) 
