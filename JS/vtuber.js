@@ -9,9 +9,17 @@ async function getRandomVtuber(){
     let vtuberObj = null;
 
     await fetch(urlJson)
-        .then(response => {
-            console.log(response);
-            return JSON.parse(response);
+        .then(async response => {
+
+            if(!response.ok)
+                throw new Error(`fetch error ${response.status}`);
+            
+            let value = undefined;
+            await response.text().then(result => {
+                value = result;
+            })
+
+            return JSON.parse(value);
         }) 
         .then(vtubers => {
             let randomIndex = Math.floor(Math.random() * vtubers.length);
